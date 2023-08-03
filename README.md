@@ -1,3 +1,4 @@
+    
 # OSZsave - osu! Beatmap Downloader
 
 ## About
@@ -12,7 +13,11 @@ OSZsave is a powerful and convenient tool designed to help osu! players download
 ### Why OSZsave?
 osu! is a fast-paced rhythm game with a vibrant community that continually creates new beatmaps. OSZsave provides a way to quickly and easily download these beatmaps, whether you're looking to experiment with new challenges or simply expand your collection. With its emphasis on user-friendliness and efficiency, OSZsave is a must-have tool for osu! enthusiasts.
 
-## Instructions
+<img src="readme/OSZbanner-lite.png"
+           alt="OSZ Banner"
+             style="height: 300px; width: auto;" />
+
+# Instructions:
 
 ## Getting Headers:
 1. Go to [osu.ppy.sh](https://osu.ppy.sh).
