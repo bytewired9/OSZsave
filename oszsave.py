@@ -135,7 +135,7 @@ def extract_headers(curl_command):
     return headers
 
 def get_headers():
-    config_path = os.path.join(os.path.dirname(__file__), 'config')
+    config_path = os.path.join(os.getcwd(), 'config')
     input_filename = os.path.join(config_path, 'curl_command.txt')
     output_filename = os.path.join(config_path, 'headers.json')
 
@@ -184,7 +184,7 @@ headers = get_headers()
 
 
 def get_urls(filename=None):
-    config_path = os.path.join(os.path.dirname(__file__), 'config')
+    config_path = os.path.join(os.getcwd(), 'config')
     if filename is None:
         filename = os.path.join(config_path, 'beatmap_list.json')
 
@@ -286,7 +286,7 @@ def download_from_url(url):
         print("URL is None, skipping download.")
         return None
     qs = parse.parse_qs(url)
-    download_path = os.path.join(os.path.dirname(__file__), 'downloaded')
+    download_path = os.path.join(os.getcwd(), 'downloaded')
     if not os.path.exists(download_path):
         os.makedirs(download_path)
     filename = os.path.join(download_path, sanitize(qs[list(qs.keys())[0]][0]))
@@ -297,7 +297,7 @@ def download_from_url(url):
 
 
 def check_done(chk):
-    filename = os.path.join(os.path.dirname(__file__), 'config', 'done.json')
+    filename = os.path.join(os.getcwd(), 'config', 'done.json')
     if not os.path.exists(filename):
         with open(filename, "w") as fp:
             fp.write(json.dumps([]))
@@ -307,7 +307,7 @@ def check_done(chk):
 
 
 def mark_done(mrk):
-    filename = os.path.join(os.path.dirname(__file__), 'config', 'done.json')
+    filename = os.path.join(os.getcwd(), 'config', 'done.json')
     current = None
     if not os.path.exists(filename):
         with open(filename, "w") as fp:
@@ -376,16 +376,6 @@ if __name__ == "__main__":
         mark_done(each)
         print(f"Done with {os.path.basename(downloaded_filename)}!")
 
-        sleep_duration = random.randint(5, 20)
+        sleep_duration = random.randint(5, 10)
         print(f"Sleeping for {sleep_duration} seconds before the next request...")
         time.sleep(sleep_duration)
-    
-        print("All downloads completed successfully! Press Enter to exit...")
-        input()  # Wait for the user to press Enter before exiting
-
-
-
-
-
-
-
