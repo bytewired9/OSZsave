@@ -1,5 +1,13 @@
-    
+<div align=center>
 # OSZsave - osu! Beatmap Downloader
+    
+<img src="readme/oszsave.png"
+           alt="OSZsave logo"
+             style="height: 300px; width: auto;" />
+
+![GitHub issues](https://img.shields.io/github/issues/ForgedCore8/OSZsave) ![GitHub all releases](https://img.shields.io/github/downloads/ForgedCore8/OSZsave/total) ![GitHub](https://img.shields.io/github/license/ForgedCore8/OSZsave)
+
+</div>
 
 ## About
 OSZsave is a powerful and convenient tool designed to help osu! players download their favorite beatmaps in bulk. Whether you want to import a handful or hundreds of beatmaps from user profiles, OSZsave streamlines the process, saving you time and effort.
@@ -9,6 +17,9 @@ OSZsave is a powerful and convenient tool designed to help osu! players download
 - **Custom Headers**: Personalize your download process by adding custom headers.
 - **Ease of Use**: Simple step-by-step instructions guide you through the setup and download process.
 - **Lightweight**: OSZsave is designed to be user-friendly, lightweight, and efficient, making it accessible to players of all skill levels.
+- **Anti Ratelimit**: Avoiding the rate limit to download as many beatmaps as possible.
+- **Wide Range**: Unlike other tools, this program allows you to get every beatmap from a user's profile.
+- **Storage Efficient**: This tool ensures that it is only downloading new maps, saving you space and time.
 
 ### Why OSZsave?
 osu! is a fast-paced rhythm game with a vibrant community that continually creates new beatmaps. OSZsave provides a way to quickly and easily download these beatmaps, whether you're looking to experiment with new challenges or simply expand your collection. With its emphasis on user-friendliness and efficiency, OSZsave is a must-have tool for osu! enthusiasts.
