@@ -1,4 +1,5 @@
 <div align=center>
+    
 # OSZsave - osu! Beatmap Downloader
     
 <img src="readme/oszsave.png"
