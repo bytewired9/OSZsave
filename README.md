@@ -7,10 +7,11 @@
              style="height: 300px; width: auto;" />
 
 ![GitHub issues](https://img.shields.io/github/issues/ForgedCore8/OSZsave) ![GitHub all releases](https://img.shields.io/github/downloads/ForgedCore8/OSZsave/total) ![GitHub](https://img.shields.io/github/license/ForgedCore8/OSZsave)
-
+![Alt](https://repobeats.axiom.co/api/embed/1da7c935726e07d16ffc00d3ab4287d8afa5f817.svg "Repobeats analytics image")
 </div>
-
+   
 ## About
+
 OSZsave is a powerful and convenient tool designed to help osu! players download their favorite beatmaps in bulk. Whether you want to import a handful or hundreds of beatmaps from user profiles, OSZsave streamlines the process, saving you time and effort.
 
 ### Features
@@ -26,11 +27,11 @@ OSZsave is a powerful and convenient tool designed to help osu! players download
 osu! is a fast-paced rhythm game with a vibrant community that continually creates new beatmaps. OSZsave provides a way to quickly and easily download these beatmaps, whether you're looking to experiment with new challenges or simply expand your collection. With its emphasis on user-friendliness and efficiency, OSZsave is a must-have tool for osu! enthusiasts.
 
 <img src="readme/OSZbanner-lite.png"
-           alt="OSZ Banner"
-             style="height: 300px; width: auto;" />
-
+           alt="OSZ Banner"/>
+<div align=center>
+    
 # Instructions:
-
+</div>
 ## Getting Headers:
 1. Go to [osu.ppy.sh](https://osu.ppy.sh).
 2. Go to the beatmaps page.
@@ -133,3 +134,4 @@ findNextButtons();
 
 ## Need Help?
 - If you encounter any problems or have any questions about the process, feel free to reach out to me on Discord: @forgedcore8. I'll be happy to assist you!
+
