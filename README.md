@@ -6,7 +6,7 @@
            alt="OSZsave logo"
              style="height: 300px; width: auto;" />
 
-![GitHub issues](https://img.shields.io/github/issues/ForgedCore8/OSZsave) ![GitHub all releases](https://img.shields.io/github/downloads/ForgedCore8/OSZsave/total) ![GitHub](https://img.shields.io/github/license/ForgedCore8/OSZsave)
+![GitHub all releases](https://img.shields.io/github/downloads/ForgedCore8/OSZsave/total) ![GitHub](https://img.shields.io/github/license/ForgedCore8/OSZsave)
 ![Alt](https://repobeats.axiom.co/api/embed/1da7c935726e07d16ffc00d3ab4287d8afa5f817.svg "Repobeats analytics image")
 </div>
    
