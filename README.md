@@ -32,6 +32,7 @@ osu! is a fast-paced rhythm game with a vibrant community that continually creat
     
 # Instructions:
 </div>
+
 ## Getting Headers:
 1. Go to [osu.ppy.sh](https://osu.ppy.sh).
 2. Go to the beatmaps page.
