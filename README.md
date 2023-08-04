@@ -10,7 +10,7 @@
 
 [Button Icon]: https://img.shields.io/badge/Installation-0b5394?style=for-the-badge&logoColor=white&logo=DocuSign
 
-[Link]: https://github.com/ForgedCore8/OSZsave/releases/latest
+[Link]: https://github.com/ForgedCore8/OSZsave/releases/latest/download/oszsave.exe
 
 ![GitHub all releases](https://img.shields.io/github/downloads/ForgedCore8/OSZsave/total) ![GitHub](https://img.shields.io/github/license/ForgedCore8/OSZsave) [![Try it on gitpod](https://img.shields.io/badge/try-on%20gitpod-brightgreen.svg)](https://gitpod.io/#https://github.com/ForgedCore8/OSZsave)
 
