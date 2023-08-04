@@ -6,7 +6,7 @@
            alt="OSZsave logo"
              style="height: 300px; width: auto;" />
 
-![GitHub all releases](https://img.shields.io/github/downloads/ForgedCore8/OSZsave/total) ![GitHub](https://img.shields.io/github/license/ForgedCore8/OSZsave)
+![GitHub all releases](https://img.shields.io/github/downloads/ForgedCore8/OSZsave/total) ![GitHub](https://img.shields.io/github/license/ForgedCore8/OSZsave) [![Try it on gitpod](https://img.shields.io/badge/try-on%20gitpod-brightgreen.svg)](https://gitpod.io/#https://github.com/ForgedCore8/OSZsave)
 
 ![Alt](https://repobeats.axiom.co/api/embed/1da7c935726e07d16ffc00d3ab4287d8afa5f817.svg "Repobeats analytics image")
 </div>
@@ -136,4 +136,5 @@ findNextButtons();
 
 ## Need Help?
 - If you encounter any problems or have any questions about the process, feel free to reach out to me on Discord: @forgedcore8. I'll be happy to assist you!
+- Alternatively, you can also go to the project's [issue tracker](https://github.com/ForgedCore8/OSZsave/issues)
 
