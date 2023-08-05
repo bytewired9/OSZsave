@@ -1,7 +1,8 @@
 <div align=center>
     
 # OSZsave - osu! Beatmap Downloader
-    
+### Version 1.2.0
+
 <img src="readme/oszsave.png"
            alt="OSZsave logo"
              style="height: 300px; width: auto;" />
