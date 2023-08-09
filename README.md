@@ -37,6 +37,14 @@ osu! is a fast-paced rhythm game with a vibrant community that continually creat
 <img src="readme/OSZbanner-lite.png"
            alt="OSZ Banner"/>
 <div align=center>
+
+---
+
+# TO-DO"
+* Use Mirrors for security and better speed
+* GUI for user friendliness
+
+---
     
 # Instructions:
 </div>
