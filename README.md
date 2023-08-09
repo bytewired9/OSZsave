@@ -70,6 +70,6 @@ osu! is a fast-paced rhythm game with a vibrant community that continually creat
 ---
 
 ## Need Help?
-- If you encounter any problems or have any questions about the process, feel free to reach out to me on Discord: @forgedcore8. I'll be happy to assist you!
+- If you encounter any problems or have any questions about the process, feel free to reach out to me on Discord: @forgedcore8 in [StompZone](https://discord.io/stomp). I'll be happy to assist you!
 - Alternatively, you can also go to the project's [issue tracker](https://github.com/ForgedCore8/OSZsave/issues)
 
