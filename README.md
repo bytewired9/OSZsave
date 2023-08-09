@@ -40,7 +40,7 @@ osu! is a fast-paced rhythm game with a vibrant community that continually creat
 
 ---
 
-# TO-DO"
+# TO-DO:
 * Use Mirrors for security and better speed
 * GUI for user friendliness
 
