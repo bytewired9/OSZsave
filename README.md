@@ -1,7 +1,7 @@
 <div align=center>
     
 # OSZsave - osu! Beatmap Downloader
-### Version 1.3.0
+### Version 1.4.0
 
 <img src="readme/oszsave.png"
            alt="OSZsave logo"
@@ -11,9 +11,9 @@
 
 [Button Icon]: https://img.shields.io/badge/Installation-0b5394?style=for-the-badge&logoColor=white&logo=DocuSign
 
-[Link]: https://github.com/ForgedCore8/OSZsave/releases/latest/download/oszsave.exe
+[Link]: https://github.com/ByteWired9/OSZsave/releases/latest/download/oszsave.exe
 
-![GitHub all releases](https://img.shields.io/github/downloads/ForgedCore8/OSZsave/total) ![GitHub](https://img.shields.io/github/license/ForgedCore8/OSZsave) [![Try it on gitpod](https://img.shields.io/badge/try-on%20gitpod-brightgreen.svg)](https://gitpod.io/#https://github.com/ForgedCore8/OSZsave)
+![GitHub all releases](https://img.shields.io/github/downloads/ByteWired9/OSZsave/total) ![GitHub](https://img.shields.io/github/license/ByteWired9/OSZsave) [![Try it on gitpod](https://img.shields.io/badge/try-on%20gitpod-brightgreen.svg)](https://gitpod.io/#https://github.com/ByteWired9/OSZsave)
 
 ![Alt](https://repobeats.axiom.co/api/embed/1da7c935726e07d16ffc00d3ab4287d8afa5f817.svg "Repobeats analytics image")
 </div>
@@ -39,26 +39,9 @@ osu! is a fast-paced rhythm game with a vibrant community that continually creat
 <div align=center>
 
 ---
-
-# TO-DO:
-* Use Mirrors for security and better speed
-* GUI for user friendliness
-
----
     
 # Instructions:
 </div>
-
-## Getting Headers:
-
-1. Navigate to the [osu.ppy.sh](https://osu.ppy.sh) website.
-2. Go to the beatmaps page.
-3. Select a random beatmap.
-4. Open the network page. This can be achieved by pressing `F12` or right-clicking the page and selecting 'Inspect'. Once the inspection window is open, navigate to the 'Network' tab.
-5. Click the download button on the beatmap. Note that you do not have to save it; just clicking it is enough.
-6. In the network tab, find the packet that is titled "download."
-7. Right-click this packet and choose 'Copy as cURL (bash).'
-8. Paste the copied command into the `curl_command.txt` file.
 
 ## Getting Beatmap Links:
 
@@ -72,16 +55,15 @@ osu! is a fast-paced rhythm game with a vibrant community that continually creat
 3. Enjoy the maps!
 
 ### Notes:
-- Please be aware that the program could take up to several hours to complete if you are processing a large list of beatmaps. Make sure to plan accordingly and be patient.
 - If osu! doesn't automatically process the new beatmaps, press `F5` in the song select screen to manually refresh the song list.
 
 ---
 
 ## Need Help?
-- If you encounter any problems or have any questions about the process, feel free to reach out to me on Discord: @forgedcore8 in [StompZone](https://discord.io/stomp). I'll be happy to assist you!
-- Alternatively, you can also go to the project's [issue tracker](https://github.com/ForgedCore8/OSZsave/issues)
+- If you encounter any problems or have any questions about the process, feel free to reach out to me on Discord: @bytewired9 in [StompZone](https://discord.io/stomp). I'll be happy to assist you!
+- Alternatively, you can also go to the project's [issue tracker](https://github.com/ByteWired9/OSZsave/issues)
 
 ## Contributors
-<a href = "https://github.com/forgedcore8/oszsave/graphs/contributors">
-  <img src = "https://contrib.rocks/image?repo=forgedcore8/oszsave"/>
+<a href = "https://github.com/ByteWired9/oszsave/graphs/contributors">
+  <img src = "https://contrib.rocks/image?repo=bytewired9/oszsave"/>
 </a>
