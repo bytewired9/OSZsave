@@ -50,7 +50,7 @@ osu! is a fast-paced rhythm game with a vibrant community that continually creat
 
 ## Running:
 
-1. After the headers and beatmap links are ready, you can run the program.
+1. After the beatmap links are ready, you can run the program.
 2. Once all of the beatmaps have finished downloading, the program will automatically move the files to the osu! songs folder.
 3. Enjoy the maps!
 
