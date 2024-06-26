@@ -5,7 +5,6 @@ import json
 import httpx
 import shutil
 import unicodedata
-import curses
 from datetime import datetime
 from urllib.parse import unquote, urljoin
 from selenium import webdriver
@@ -15,7 +14,13 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 from colorama import init
 import signal
-
+try:
+    import curses
+except ImportError:
+    if os.name == 'nt':
+        import windows_curses as curses
+    else:
+        raise
 # Initialize colorama
 init(autoreset=True)
 
