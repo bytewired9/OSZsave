@@ -1,4 +1,5 @@
 import os
+import sys
 import re
 import time
 import json
@@ -14,6 +15,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 from colorama import init
 import signal
+
+os.chdir(os.path.dirname(sys.executable))
 try:
     import curses
 except ImportError:
