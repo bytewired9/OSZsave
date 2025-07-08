@@ -1,4 +1,5 @@
 import os
+import sys
 import re
 import time
 import json
@@ -11,9 +12,11 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException
+from selenium.common.exceptions import TimeoutException, StaleElementReferenceException
 from colorama import init
 import signal
+
+os.chdir(os.path.dirname(sys.executable))
 try:
     import curses
 except ImportError:
@@ -34,7 +37,7 @@ def signal_handler(sig, frame):
 
 signal.signal(signal.SIGINT, signal_handler)
 
-CURRENT_VERSION = "1.4.0"
+CURRENT_VERSION = "1.5.0"
 
 banner = """
   ██████╗ ███████╗███████╗███████╗ █████╗ ██╗   ██╗███████╗
@@ -42,7 +45,7 @@ banner = """
  ██║   ██║███████╗  ███╔╝ ███████╗███████║██║   ██║█████╗  
  ██║   ██║╚════██║ ███╔╝  ╚════██║██╔══██║╚██╗ ██╔╝██╔══╝  
  ╚██████╔╝███████║███████╗███████║██║  ██║ ╚████╔╝ ███████╗
-  ╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚══════╝
+  ╚═════╝ ╚══════╝╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝
  ██████████████████████████████████████████████████████████╗
  ╚═════════════════════════════════════════════════════════╝
 """
@@ -68,29 +71,45 @@ def scroll_to_bottom(driver):
 def find_next_buttons(driver, stdscr):
     """Find and click 'next' buttons in different sections."""
     scroll_to_bottom(driver)
-    add_str_to_curses(stdscr, "Searching for 'next' buttons...\n")
+    add_str_to_curses(stdscr, "Searching for 'show more' buttons...\n")
     sections_to_scroll = ["recent_activity", "top_ranks", "medals", "historical", "beatmaps"]
     sections_expanded = 0
     start_time = time.time()
 
     for section in sections_to_scroll:
         scroll_to_section(driver, section)
-        time.sleep(1)
+        # Give the section time to potentially load initial content
+        time.sleep(1) 
+        
         while True:
             try:
+                # Find the button. This will get a fresh reference in each loop iteration.
                 wait = WebDriverWait(driver, 2)
                 btn = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, ".show-more-link--profile-page")))
+                
+                # Scroll to the button and click it
                 driver.execute_script("arguments[0].scrollIntoView({ behavior: 'auto', block: 'center' });", btn)
                 btn.click()
+                
+                # Wait for the new content to load after the click
                 time.sleep(1)
+                
                 sections_expanded += 1
                 elapsed_time = time.time() - start_time
                 add_str_to_curses(stdscr, f'\rExpanding link sections. [Sections expanded: {sections_expanded}; Time elapsed: {elapsed_time:.2f} seconds]')
-            except TimeoutException:
-                add_str_to_curses(stdscr, f"\nNo more 'next' buttons found in the section '{section}'. Moving to the next section...\n")
-                break
 
-    add_str_to_curses(stdscr, "\nNo more 'next' buttons found, start digging gold!\n")
+            except TimeoutException:
+                # This is the expected exit condition: no more "show more" buttons are found.
+                add_str_to_curses(stdscr, f"\nNo more 'show more' buttons in section '{section}'. Moving on.\n")
+                break # Exit the while loop for the current section
+
+            except StaleElementReferenceException:
+                # The button was clicked, but the page changed, making the reference stale.
+                # Simply continue the loop to find the button again in the new DOM.
+                add_str_to_curses(stdscr, "\nStale element detected, re-locating...")
+                continue
+
+    add_str_to_curses(stdscr, "\nFinished expanding all sections. Proceeding to collect links!\n")
     dig_for_gold(driver, stdscr)
 
 def dig_for_gold(driver, stdscr):
@@ -164,6 +183,9 @@ def scraper(stdscr):
             exit()
 
     chrome_options = webdriver.ChromeOptions()
+    chrome_options.add_argument("--window-size=1920,1080")
+    chrome_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36")
+    chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
     chrome_options.add_argument("--headless")
 
     try:
